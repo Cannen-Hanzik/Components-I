@@ -23,8 +23,19 @@ function menuMaker(linksArray) {
     menuList.appendChild(link);
   });
 
-  return menuWrapper
+
+  const intMenu = document.querySelector('.menu-button');
+
+  intMenu.addEventListener('click', () => {
+    menuWrapper.classList.toggle('menu--open');
+  });
+
+
+
+  return menuWrapper;
 }
+
+document.querySelector('.header').appendChild(menuMaker(menuItems));
 /*
   Step 1: Write a component called 'menuMaker' to create a menu like the markup below:
 
